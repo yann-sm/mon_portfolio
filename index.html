@@ -20,12 +20,14 @@
 			<div class="heading-primary-line"></div>
 			<a href="https://www.sololearn.com"> Solo-Learn </a><br>
 			<a href="https://www.openclassrooms.com"> OpenClassrooms </a>
+		<!--	<p id="loisir" onclick="Open();">Mes loisirs</p>--><br>
+			<a href="javascript:void(0)" onclick="Open();">Mes loisirs</a>
 		</div>
 	</header>
 
 	<section class="project-section">
 		<div class="center-text margin-top-medium">
-			<h1 class="heading-project">Mes Projets réalisés avec OpenClassrooms</h1>
+			<h1 class="heading-project">Mes Projets réalisées avec OpenClassrooms</h1>
 		</div>
 
 		<div class="project-row">
@@ -72,7 +74,9 @@
 				<a class="project-link-btn" href="https://github.com/yann-sm/Projet7">Voir code</a>
 			</div>
 		</div>
+	</section>
 
+	<section class="project-section-2">
 		<div class="center-text margin-top-medium">
 			<h1 class="heading-project" id="heading-project-color">Projets personnels</h1>
 		</div>
@@ -83,7 +87,7 @@
 				<h1 class="margin-top-medium">Mon portfolio</h1>
 				<p class="margin-top-medium">Html, CSS</p>
 				<p class="margin-top-medium"> Réaliser le : Janvier 2021 </p>
-				<a class="project-link-btn" href="https://github.com/yann-sm/mon_portfolio">Voir code</a>
+				<a class="project-link-btn" href="https://github.com/yann-sm/mon_portfolio/">Voir code</a>
 			</div>
 
 			<div class="project-items project-items-hover">
@@ -146,9 +150,32 @@
 		</div>
 	</section>
 
+	<section class="loisir" id="loisir">
+		<div class="container">
+			<span class="loisir-close" onclick="Close()">Fermer</span>
+			<p>Le développement</p>
+            <img class="loisir-img" src="http://www.super-julie.fr/wp-content/uploads/2014/09/code-terre.jpg" alt="Développement">
+            <p>Le dessin</p>
+            <img class="loisir-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWCOtldPsS_7ep6kprcCbVg88mhlA3NPIJt6AMupK6k6pg7W5&s" alt="Le dessin">
+            <p>Le sport</p>
+            <img class="loisir-img" src="https://www.crepyenvalois.fr/images/illu_sports_anim_jeunesse.jpg" alt="Le sport" title="Le sport">
+		</div>
+	</section>
+
 	<footer class="footer">
 		<h4>Copyright - Y.S.M 2021</h4>
 	</footer>
+
+	<script>
+
+		function Open(){
+			document.getElementById('loisir').style.visibility = "visible";
+		}
+
+		function Close(){
+			document.getElementById('loisir').style.visibility = "hidden";
+		}
+	</script>
 
 </body>
 </html>
