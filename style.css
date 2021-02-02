@@ -369,4 +369,19 @@ ul li {
 	}
 }
 
+@media (max-width: 380px) {
+	.heading-project {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.heading-primary-main {
+		font-size: 1.9rem;
+	}
+	.heading-project {
+		font-size: 1.1rem;
+	}
+}
+
 
