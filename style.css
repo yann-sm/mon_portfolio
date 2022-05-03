@@ -1,19 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 * {
 	padding: 0; margin: 0; box-sizing: border-box;
 }
-
 body {
 	font-family: 'Lato', sans-serif;
 	background-color: #eee;
 	overflow-x: hidden;
 }
-
 a {
+	position: relative;
 	color: red;
 	text-decoration: none;
+	z-index: 3;
 }
-
 a:hover {
 	color: yellow;
 }
@@ -28,7 +28,6 @@ a:hover {
 }
 
 .header {
-	position: relative;
 	height: 20em;
 	background-color: #353535;
 	color: #fff;
@@ -85,6 +84,7 @@ a:hover {
 	margin-top: -3rem;
 	height: 100%;
 	margin-bottom: 10rem;
+	/*z-index: 3;*/
 }
 
 .project-section-2 {
@@ -92,6 +92,7 @@ a:hover {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #353535;
+	/*z-index: 3;*/
 }
 
 .heading-project {
@@ -122,6 +123,7 @@ a:hover {
 }
 
 .project-row {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	padding: 1rem;
@@ -142,6 +144,7 @@ a:hover {
 	/*max-width: 800px;*/
 	animation-name: opac;
 	animation-duration: 5s;
+	opacity: .8;
 }
 
 @keyframes slideTop {
@@ -154,10 +157,13 @@ a:hover {
 		width: 100%; 
 	}
 }
-
+.project-items-hover {
+	z-index: 3;
+}
 .project-items-hover:hover {
 	background-color: white;
-	border: 2px solid black;
+	border: 1px solid black;
+	transition: .5s;
 }
 
 .project-items-title {
@@ -181,8 +187,118 @@ a:hover {
 	background: #353535;
 }
 
+/* SECTION 5 */
+.softSkill-title {
+	font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+	/*color: #353535;*/
+	background-image: linear-gradient(135deg, red 0%, #764ba2 100%);/*#667eea*/
+	-webkit-background-clip: text;
+	color: transparent;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 5px;
+	margin-top: 80px;
+}
+.flexBox {
+	display: flex;
+	justify-content: center;
+}
+#second {
+	padding-top: 15px;
+	padding-bottom: 15px; 
+	overflow: auto;
+}
+.marge {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 30px;
+}
+.rowS5 {
+	width: 100%;
+	color: #2a2a2a;
+	display: grid; 
+	grid-row-gap: 25px;
+	grid-column-gap: 15px;
+	z-index: 3;
+	font-weight: bold;
+}
+.s5-container {
+	z-index: 1;
+	color: black;
+	flex-wrap: wrap;
+}
+.boxS5 {
+	width: 150px;
+	height: 150px;
+	background-color: transparent;
+	border-radius: 28px;
+	margin-bottom: 20px;
+	z-index: 3;
+	transition: .3s;
+	margin: 15px;
+}
+.boxS5:hover {
+	transform: scale(1.1);
+	transition: .3s;
+	border: 0.1px solid lightgrey;
+	box-shadow: 0 4px 8px 0 #2a2a2a, 0 6px 20px 0 #2a2a2a;
+}
+.imgBlock {
+	border-radius: 28px;
+	object-fit: contain;
+	width: 150px;
+	height: 150px;
+}
+.cardSlide {
+	position: relative;
+	z-index: 3;
+}
 
-/* Skill section */
+.rowS5 .cardSlide {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid white;
+	border-radius: 6px;
+	margin-top: 20px;
+}
+.rowS5 .cardSlide::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5px;
+	height: 100%;
+	background: #ffbd00;
+	transition: all 0.3s ease;
+}
+.rowS5 .cardSlide:hover:before {
+	top: 0;
+	right: calc(100% - 5px);
+	z-index: 10;
+}
+.rowS5 .cardSlide .second {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 100%;
+	background-color: white;
+	transition: all 0.3s ease-in-out;
+}
+.rowS5 .cardSlide:hover .second {
+	top: 0;
+	left: 0;
+}
+.shadowBox {
+	box-shadow: 0 4px 8px 0 lightgrey, 0 6px 20px 0 lightgrey;
+}
+#s5 {
+	z-index: 3;
+}
 .skill-section {
 	margin-top: -6rem;
 	padding: 6rem 0;
@@ -190,6 +306,8 @@ a:hover {
 }
 
 .skill-heading-main {
+	position: relative;
+	z-index: 3;
 	font-size: 2rem;
 	font-weight: 600;
 	display: inline-block;
@@ -217,44 +335,7 @@ ul li {
 	display: block;
 	border-radius: 10px;
 }
-/*
-#prog-bar {
-	display: inline-block;
-	margin-left: 1rem;
-	width: 200px;
-	height: 10px;
-	border-radius: 5%;
-	background-color: lightgrey;
-}
 
-#prog-bar-1 {
-	position: absolute;
-	width: 100px;
-	height: 10px;
-	background-color: green;
-}
-
-#prog-bar-2 {
-	position: absolute;
-	width: 80px;
-	height: 10px;
-	background-color: green;
-}
-
-#prog-bar-3 {
-	position: absolute;
-	width: 40px;
-	height: 10px;
-	background-color: green;
-}
-
-#prog-bar-4 {
-	position: absolute;
-	width: 40px;
-	height: 10px;
-	background-color: green;
-}
-*/
 .hr {
 	width: 100%;
 	border: 1px solid black;
@@ -272,8 +353,7 @@ ul li {
 	border: 2px solid royalblue;
 	border-radius: 50% 50% 0 0;
 }
-
-/*  */
+/* Animation fleche */
 .fetch {
 	text-align: center;
 	font-size: 30px;
@@ -284,7 +364,6 @@ ul li {
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 }
-
 @keyframes fetch {
 	10%, 30%, 50%, 70%, 90% {
 	  transform: translateY(-10px);
@@ -293,65 +372,6 @@ ul li {
 	  transform: translateY(14px);
 	}
 }
-
-/*loisirs*/
-.loisir {
-	position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(31, 30, 30, 0.678);
-    overflow: scroll;
-    z-index: 1;
-    visibility: hidden;
-}
-#loisir { color: red; }
-
-#loisir:hover { color: yellow; cursor: pointer; }
-
-.container {
-	box-sizing: border-box;
-    background-color: #353535/*#002766;/*white */;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    padding-bottom: 5%;
-    width: 800px;
-    height: 90%;
-    border-radius: 15px;
-}
-
-.container p { 
-	color: white; 
-	padding-bottom: 5px;
-	margin-bottom: 5px;
-}
-
-.loisir-close {
-    color: red;
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: 20px;
-    cursor: pointer;
-    margin-top: -20px;
-}
-.loisir-close:hover { color: yellow; }
-
-.loisir-img {
-    align-content: center;
-    margin-bottom: 15px;
-    outline: 6px solid darkblue;
-}
-
-.loisir-img:hover {
-    outline: 6px solid darkred;
-
-}
-
 
 @media (max-width: 1000px) {
 	.project-row {

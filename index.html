@@ -2,16 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<!--responsive-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bubbleStyle.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-	
-	<script src="script.js"></script>
 
 	<title> Mon Portfolio </title>
-</head>
+</head> 
 <body>
 	<header class="header">
 		<div class="primary-header-box">
@@ -22,11 +20,9 @@
 			<div class="heading-primary-line"></div>
 			<a href="https://www.sololearn.com"> Solo-Learn </a><br>
 			<a href="https://www.openclassrooms.com"> OpenClassrooms </a>
-		<!--	<p id="loisir" onclick="Open();">Mes loisirs</p><br>
-			<a href="javascript:void(0)" onclick="Open();">Mes loisirs</a>-->
 		</div>
 	</header>
-
+	
 	<section class="project-section">
 		<div class="center-text margin-top-medium">
 			<h1 class="heading-project">Mes Projets réalisés avec OpenClassrooms</h1>
@@ -123,36 +119,114 @@
 			<h1 class="skill-heading-main">SKILLS</h1>
 		</div>
 
+		<div id="s5">
+			<div class="containerSlide marge">
+					<div class="rowS5">
+
+						<div class="cardSlide shadowBox">
+							<h2 class="softSkill-title">Développement web</h2>
+
+							<div class="second" id="second">
+								<div class="flexBox s5-container slide">
+									<div class="boxS5">
+										<img class="imgBlock" src="img/html5.png" title="Html5" alt="Html5">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/css.png" title="CSS3" alt="CSS3">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/java-script.png" title="Javascript" alt="Javascript">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/nodejs.png" title="NodeJs" alt="NodeJs">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/database.png" title="Sql">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/git-sketched-social-logo-outline.png" title="Git" alt="GIt">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cardSlide shadowBox">
+							<h2 class="softSkill-title">WebDesign</h2>
+
+							<div class="second" id="second">
+								<div class="flexBox s5-container slide">
+									<div class="boxS5">
+										<img class="imgBlock" src="img/adobeXD.png" title="Adobe XD" alt="Adobe XD">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/AdobeIllustrator.png" title="Illustrator" alt="Illustrator">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/logoPS.png" title="Photoshop" alt="Photoshop">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/figmaLogo.png" title="Figma" alt="Figma">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cardSlide shadowBox">
+							<h2 class="softSkill-title">Gestion de projet</h2>
+
+							<div class="second" id="second">
+								<div class="flexBox s5-container slide">
+									<div class="boxS5">
+										<img class="imgBlock" src="img/jira2.png" title="Jira" alt="Jira">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/confluence.png" title="Confluence" alt="Confluence">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/word.jpeg" title="Word" alt="Word">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/teams.jpeg" title="Teams" alt="Teams">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/miro.png" title="Miro" alt="MesPetitsProjets">
+									</div>
+									<div class="boxS5">
+										<img class="imgBlock" src="img/agile.png" title="Agile / Scrum" alt="agile / scrum">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
 		<div class="skill-list">
 			<ul>
-				<li>Html5<div id="prog-bar"><div id="prog-bar-1"></div></div></li>
-				<li>CSS3<div id="prog-bar"><div id="prog-bar-1"></div></div></li>
-				<li>Sql<div id="prog-bar"><div id="prog-bar-2"></div></div></li>
-				<li>Javascript<div id="prog-bar"><div id="prog-bar-1"></div></div></li>
-				<li>Git<div id="prog-bar"><div id="prog-bar-1"></div></div></li>
-				<div class="hr"></div>
-				<li>Expériences frameworks js : Vue, Jquery</li>
-				<li>Expériences sur : Node.js, Express, SASS, Php, Java, Python</li>
+				<!--<div class="hr"></div>-->
+				<li>Expériences frameworks js : Angular, Vue, Jquery</li>
+				<li>Expériences sur :Express, SASS, Php, Java, Python</li>
 				<li>Environnement de développement : VisualStudioCode, sublimeText</li>
 			</ul>
 		</div>
 	</section>
 
-	<section class="loisir" id="loisir">
-		<div class="container">
-			<span class="loisir-close" onclick="Close()">Fermer</span>
-			<p>Le développement</p>
-            <img class="loisir-img" src="http://www.super-julie.fr/wp-content/uploads/2014/09/code-terre.jpg" alt="Des ligne de code avec la terre en arrière plan" title="Des ligne de code avec la terre en arrière plan">
-            <p>Le dessin</p>
-            <img class="loisir-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWCOtldPsS_7ep6kprcCbVg88mhlA3NPIJt6AMupK6k6pg7W5&s" alt="Le dessin d'un oeil en noir et blanc" title="Le dessin d'un oeil en noir et blanc">
-            <p>Le sport</p>
-            <img class="loisir-img" src="https://www.crepyenvalois.fr/images/illu_sports_anim_jeunesse.jpg" alt="Un homme qui cour seul" title="Un homme qui cour seul">
-		</div>
-	</section>
-
 	<footer class="footer">
-		<h4>Copyright - Y.S.M 2021</h4>
+		<h4>Copyright - Y.S.M 2022</h4>
 	</footer>
+	
+	<div id="background-wrap">
+		<div class="bubble x1"></div>
+		<div class="bubble x2"></div>
+		<div class="bubble x3"></div>
+		<div class="bubble x4"></div>
+		<div class="bubble x5"></div>
+		<div class="bubble x6"></div>
+		<div class="bubble x7"></div>
+		<div class="bubble x8"></div>
+		<div class="bubble x9"></div>
+		<div class="bubble x10"></div>
+	</div>
 
 </body>
 </html>
